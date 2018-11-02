@@ -7,7 +7,7 @@
  */
 
 
- import {observable, autorun, computed} from "mobx"
+ import {observable, autorun, computed, action} from "mobx"
  //经过@observable的修饰之后，Todo的title和finished两个属性变成可观测状
 //  class Todo {
 //      id = Math.random();
@@ -47,3 +47,14 @@ number.set(9)
 // 第二个false将number改变为-19，输出false，也没有问题。
 // 但是当-19改变为-1的时候，虽然number变了，但是number的改变实际上并没有改变plus的值，所以没有其它地方收到通知，因此也就并没有输出任何值。
 // 直到number重新变为9时才输出true。
+
+
+
+// class Stroe{
+//   observable number = 0 ;
+//   action add =()=>{
+//     this.number++
+//   }
+// }
+// const newStore=new Store();
+// newStore.add()
